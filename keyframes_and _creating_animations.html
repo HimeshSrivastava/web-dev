@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>keyfarme and animation</title>
+    <style>
+   body{
+background-color: bisque;
+    }
+    .box{
+        background-color: aquamarine;
+        width: 200px;
+        height: 200px;
+         padding-top: 30px;
+         text-align: center;
+         position: relative;
+         /* animation-name: himesh;
+         animation-duration: 5s;
+         animation-iteration-count: 4; */
+         /* animation-fill-mode: forwards; */
+         /* animation-timing-function: ease-in;
+         animation-timing-function: ease-out;
+         animation-timing-function: ease-in-out; */
+         /* animation-delay: 3s; */
+         /* animation-direction: alternate; */
+
+         /* These properties can be set using this shorthand */
+         /* animation: aniamtion-name   animation-duration  animation-timing-function   animation-delay        animation-iteration-count  animation-fill-mode; */
+         animation: himesh 5s ease-in 1s infinite backwards;
+    }
+    /* @keyframes himesh {
+        from{
+        width: 200px;
+        height: 200px;
+        }
+        to{
+        width:700px;
+        height:400px;
+        }
+    } */
+    @keyframes himesh {
+       0%{
+        top: 0px;
+        left: 250px;
+       }
+       25%{
+        top: 250px;
+        left: 250px;
+       }
+       75%{
+        top: 250px;
+        left: 0px;
+       }
+       100%{
+        top: 0px;
+        left: 0px;
+       }
+    }
+</style>
+</head>
+<body>
+    <div class="container">
+      <div class="box">
+   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque maxime molestiae magni aperiam amet deserunt quidem nesciunt explicabo ullam? Animi aliquam enim </p>
+      </div>
+    </div>
+</body>
+</html>

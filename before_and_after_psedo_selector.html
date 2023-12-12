@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>before and after psedo selector</title>
+    <style>
+        body{
+            background-color: black;
+            color: aliceblue;
+           
+         }
+         header::before{
+               content:"";
+               background: url('https://images.pexels.com/photos/757889/pexels-photo-757889.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500')  no-repeat center center/cover;
+               position:static;
+               /* top: 0px; */
+               height: 100%;
+               width: 100%;
+               z-index: -1;
+               opacity: 0.3;
+         }
+        nav{
+            color: aliceblue;
+            display: flex;
+           font-size: 20px;
+            list-style: none;
+            margin-top: 20px;
+            margin-bottom: 40px;
+        }
+        nav li{
+            margin-left: 30px;
+          
+        }
+        section{
+            
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 400px;
+        }
+        /* section::before{
+            content: "this is the website"
+        } */
+        section::after{
+            content: "this is the second website"
+        }
+    </style>
+</head>
+<body>
+   
+    <header>
+        <nav>
+            <li>File</li>
+            <li>Home</li>
+            <li>About</li>
+            <li>Insert</li>
+        </nav>
+    </header>
+    
+    <section>
+       <h2>welcome to this website</h2> 
+        <p>this is the most important of all the website and all you have to notice it from doing thing to get the right work and my best wishes is always with you </p>
+    </section>
+</body>
+</html>

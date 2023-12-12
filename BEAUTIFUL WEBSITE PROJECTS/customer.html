@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Details</title>
+    <style>
+        .btn{
+            color: white;
+            border-radius: 8px;
+            background-color: black;
+
+        }
+    </style>
+</head>
+<body style="background-color:#C5E1A5;">
+    <h1 style="color: rgb(225 225 234); background-color: rgb(13 60 60); text-align: center;">Student Details</h1>
+    
+    <!-- Form for adding new customers -->
+    <form id="customerForm">
+        <input type="text" id="FirstName" placeholder="First Name">
+        <input type="text" id="LastName" placeholder="Last Name">
+        <input type="text" id="Email" placeholder="Email">
+        <button type="button" class="btn" onclick="addCustomer()">Add Student</button>
+    </form>
+    
+    <!-- Display customer details in a table -->
+    <table>
+        <thead>
+            <tr>
+                <th style="padding: 40px;">First Name</th>
+                <th style="padding: 40px;">Last Name</th>
+                <th style="padding: 40px;">Email</th>
+                <th style="padding: 40px;">Action</th>
+                <th style="padding: 40px;">Fee Details</th>
+                <th style="padding: 40px;">Create ID</th>
+                <!-- <button type="button" class="btn" onclick="createId()"></button> -->
+                <!-- <th style="padding: 40px;"  onclick="createId()">Create ID</th> -->
+            </tr>
+        </thead>
+        <tbody id="customerList">
+            <!-- Customer details will be added here dynamically -->
+          
+        </tbody>
+    </table>
+    
+    <button type="button" class="btn" onclick="removeAllCustomers()"style="margin: 40px;">Remove All Students</button>
+
+    <script>
+        // Customer data array
+        let customers = [
+            {
+                firstName: "Himesh",
+                    lastName: "Srivastava",
+                    email: "himeshsrivastava123@gmail.com",
+            },
+            {
+                firstName: "Kalash",
+                    lastName: "Srivastava",
+                    email: "kalashsrivastava123@gmail.com",
+            },
+            {
+                firstName: "Himanshu",
+                    lastName: "Srivastava",
+                    email: "Himanshusrivastava123@gmail.com",   
+            },
+            {
+                firstName: "Dinesh",
+                    lastName: "Srivastava",
+                    email: "dineshsrivastava123@gmail.com",
+            }
+        ];
+         // Update the customer list
+         displayCustomers();
+
+
+         //Function to create id
+         function createId(){
+            alert("Your ID is Generated Take it from collage.");
+         }
+
+        // Function to add a new customer
+        function addCustomer() {
+             firstName = document.getElementById("FirstName").value;
+            const lastName = document.getElementById("LastName").value;
+            const email = document.getElementById("Email").value;
+
+            if (firstName && lastName && email) {
+                // Create a new customer object
+                const customer = {
+                    firstName: firstName,
+                    lastName: lastName,
+                    email: email,
+                };
+             let conf= confirm("are you sure");
+             if(conf){
+                // Add the customer to the array
+                customers.push(customer);
+
+             }
+             
+
+                // Clear input fields
+                document.getElementById("FirstName").value = "";
+                document.getElementById("LastName").value = "";
+                document.getElementById("Email").value = "";
+
+                // Update the customer list
+                displayCustomers();
+            }
+           
+           
+        }
+
+        // Function to display customers in the table
+        function displayCustomers() {
+            const customerList = document.getElementById("customerList");
+            customerList.innerHTML = '';
+
+            customers.forEach((customer, index) => {
+                const row = customerList.insertRow();
+                row.innerHTML = `
+                    <td style="padding:2px 40px;">${customer.firstName}</td>
+                    <td style="padding:2px 40px;">${customer.lastName}</td>
+                    <td style="padding:2px 40px;">${customer.email}</td>
+                    <td style="padding:2px 40px;"><button class="btn" onclick="removeCustomer(${index})">Remove</button></td>
+                    <td style="padding:2px 40px;">${customer.Feedetails="Paid"}</td>
+                    <td style="padding:2px 40px;">${customer.CreateID="<button class=btn ><a style=color:white; onclick=createId()>create</a></button>"}</td>
+                `;
+            });
+        }
+
+        // Function to remove a specific customer
+        function removeCustomer(index) {
+            customers.splice(index, 1);
+            displayCustomers();
+        }
+
+        // Function to remove all customers
+        function removeAllCustomers() {
+            customers = [];
+            displayCustomers();
+        }
+    </script>
+</body>
+</html>

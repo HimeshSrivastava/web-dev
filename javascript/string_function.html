@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>string function</title>
+</head>
+<body>
+    <div class="container">
+        <h1>The thing are usefull for things</h1>
+        <div class="content">
+         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius ut molestiae, rerum iure amet laboriosam quidem, eaque vel sunt tempora eveniet modi! Et, dicta recusandae perspiciatis quo voluptas quidem quisquam assumenda laborum eveniet, illum architecto. Veritatis rem, est repellat nulla, sit laborum perspiciatis et nemo aperiam veniam iste ipsum rerum temporibus voluptates pariatur. Voluptates nam aperiam dolor.</p>
+
+        </div>
+    </div>
+    <script>
+        var str = "this is the string";
+        console.log(str);
+    //    First occurence of a substring
+        var position = str.indexOf('st');
+        console.log(position);
+        // last occurence of a substring
+        position = str.lastIndexOf('in');
+        console.log(position);
+
+    //   substring from string  
+    // var substr = str.slice(1,9);
+    // console.log(substr);
+    // substr = str.substring(1,9);
+    // console.log(substr);
+    // substr = str.substr(1,9);
+    // console.log(substr);
+   
+//    var replaced = str.replace('string','Himesh');
+//    console.log(str);
+//    console.log(replaced);
+    
+console.log(str.toUpperCase());
+console.log(str.toLowerCase());
+var newString = str.concat('New String');
+console.log(newString);
+var strwithwhitespace = "  this is the     best things";
+console.log(strwithwhitespace);
+console.log(strwithwhitespace.trim());
+
+
+var char2 = str.charAt(3);
+console.log(char2);
+console.log(str[2]);
+
+   </script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+nav{
+    display: flex;
+}
+.search{
+    width: 50%;
+  background-color: black;
+  text-align: right;
+  
+}
+.search input{
+    padding: 8px;
+    border: none;
+    border-radius: 12px;
+    margin-top: 10px;
+    
+}
+ button{
+   cursor: pointer;
+    margin-right:24px;
+}
+.navlist ul{
+    width:50%;
+    display: flex;
+    background-color: black;
+    
+}
+
+.navlist ul li{
+   padding: 5px 17px;
+   margin: 9px 17px;
+    list-style: none;
+}
+
+.navlist ul li a{
+    text-decoration: none;
+    color: aliceblue;
+}
+.navlist ul li a:hover{
+   color: rgb(237, 222, 198);
+}
+.logo{
+    width:15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.logo img{
+    width:50px;
+    height:50px;
+    border-radius: 60px;
+    border: 3px solid white;
+}

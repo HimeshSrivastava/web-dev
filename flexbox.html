@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flexbox</title>
+    <style>
+   .container{
+    height: 544px;
+    width: 100% ;
+    border: 2px solid black;
+    /* Intialize the container as a flexbox */
+    display: flex;
+    /* flex properties for the flex container */
+    /* (default value is row) */
+     flex-direction: row;
+    /* flex-direction: column; */
+    /* flex-direction: row-reverse; */
+    /*flex-direction: column-reverse; */
+    /* flex-wrap: wrap; */
+    /* flex-wrap: wrap-reverse; */
+
+    /* flex-flow: row-reverse wrap;    
+     justify-content: center;
+     justify-content: space-between;   */
+     /* justify-content: space-evenly; */
+    /* justify-content: space-around; 
+
+     align-items: center;
+    align-items: flex-end;
+    align-items: stretch;  */
+   }
+
+   .item{
+    width: 200px;
+    height: 200px;
+    background-color: brown;
+    border: 2px green solid;
+   }
+   #item1{
+    /* flex properties for a flex item */
+    /* higher the order later it show up in the container */
+    /* order: 3; */
+    /* flex-grow: 2; */
+   /* flex-shrink: 4; */
+   }
+   #item2{
+    /* flex-grow: 4; */
+    /* flex-shrink: 6; */
+    flex-basis: 320px;
+    /* when flex-direction: is in a row then flex-basic: will control the width. */
+    /* when flex-direction: is in a column then flex-basic: will control the height. */
+   }
+   #item3{
+    flex: 1 2 400px;
+   }
+    </style>
+</head>
+<body>
+    <h1> The world kings </h1>
+    <div class="container">
+<div class="item " id="item1">first box </div>
+<div class="item " id="item2">second box </div>
+<div class="item " id="item3">third box </div>
+<div class="item " id="item4">fourth box </div>
+<div class="item " id="item5">fifth box </div>
+    </div>
+</body>
+</html>

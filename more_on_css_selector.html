@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>more on css selector</title>
+</head>
+<style>
+h1{
+    background-color: rgb(15, 72, 53);
+    color: white;
+    font-weight: bolder;
+}
+/* if p is right inside div */
+/* div p{
+    background-color: rgb(221, 147, 50);
+    color: brown;
+    font-weight: bold;
+} */
+/* if p is right inside the li and li is right inside div then this will applied */
+/* div li p{
+    background-color: rgb(86, 191, 191);
+    color: rgb(3, 54, 54);
+} */
+/* if p is inside the div then this css is applied */
+div > p{
+    background-color: aquamarine;
+    color: blue;
+}
+/* if p is right after div i.e p is the next sibling of div */
+/* div + p{
+    background-color: antiquewhite;
+    color: rgb(12, 78, 56);
+} */
+</style>
+<body>
+    <h1>this is the heading of the program</h1>
+    <div class="row">
+        <div class="cool">
+            <ul>
+                <li><p>this is the most completed para</p></li>
+                <li>this is twisting of file</li>
+            </ul>
+        </div>
+            <p>this is the first paragraph</p>
+      
+     <p>this is the third paragraph</p>
+    </div>
+    
+</body>
+</html>

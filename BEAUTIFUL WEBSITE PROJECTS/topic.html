@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Table Example</title>
+</head>
+<body>
+    <div id="content"></div>
+    <form>
+        <input type="text" id="Firstname" placeholder="First name">
+        <input type="text" id="lastname" placeholder="Last name">
+        <input type="text" id="Email" placeholder="Email">
+        <button type="button" onclick="addonclick()">Add</button>
+    </form>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            let mydetails = [
+                { Firstname: 'sohan', lastname: 'srivastava', Email: 'himeshsrivastava@123gmail.com' },
+                { Firstname: 'suman', lastname: 'jaiswal', Email: 'jaiswal@123gmail.com' },
+                { Firstname: 'daskch', lastname: 'kumar', Email: 'suman@123gmail.com' },
+                { Firstname: 'rakesh', lastname: 'patawani', Email: 'rakesh@123gmail.com' },
+                { Firstname: 'ramesh', lastname: 'rupesh', Email: 'ramesh@123gmail.com' },
+            ];
+
+            function funCall() {
+                let html = "<table border='1|1' class='table'>";
+                html += '<thead>';
+                html += '<tr>';
+                html += '<td>' + `First name` + '</td>';
+                html += '<td>' + `last name` + '</td>';
+                html += '<td>' + `Email` + '</td>';
+                html += '<td>' + `Action` + '</td>';
+                html += '</tr>';
+                html += '</thead>';
+                for (let i = 0; i < mydetails.length; i++) {
+                    html += '<tr>';
+                    html += '<td>' + mydetails[i].Firstname + '</td>';
+                    html += '<td>' + mydetails[i].lastname + '</td>';
+                    html += '<td>' + mydetails[i].Email + '</td>';
+                    html += '</tr>';
+                }
+                html += '</table>';
+
+                // Append the HTML to the "content" element
+                document.getElementById("content").innerHTML = html;
+            }
+
+            funCall();
+
+            function addonclick() {
+                let name = document.getElementById('Firstname').value;
+                let title = document.getElementById('lastname').value;
+                let Email = document.getElementById('Email').value;
+                if (name && title && Email) {
+                    let id = mydetails.length + 1;
+                    mydetails.push({
+                        Firstname: name,
+                        lastname: title,
+                        Email: Email,
+                        id: id
+                    });
+                    funCall(); // Call the funCall function to update the table
+                }
+            }
+        });
+    </script>
+</body>
+</html>

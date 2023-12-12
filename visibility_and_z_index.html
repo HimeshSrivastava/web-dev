@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>visibility and z-index</title>
+    <style>
+        .box{
+            border: 2px solid green;
+            height: 200px;
+            width: 180px;
+        }
+        #box1{
+            background-color: aqua;
+             /* it help in hidding the block but its space is diplayed it is not removed. */
+            /* visibility: hidden; */
+            /* it help in hidding the block but its space is diplayed it is removed. */
+            /* display: none; */
+            position: relative;
+            top: 30px;
+           z-index: 80;
+        }
+        #box2{
+            background-color: antiquewhite;
+            position: relative;
+            bottom: 38px;
+            z-index: 56;
+        }
+        #box3{
+            background-color: blanchedalmond;
+        }
+        #box4{
+            background-color: azure;
+        }
+    </style>
+</head>
+<body>
+    <div id="box1" class="box">1</div>
+    <div id="box2" class="box">2</div>
+    <div id="box3" class="box">3</div>
+    <div id="box4" class="box">4</div>
+</body>
+</html>

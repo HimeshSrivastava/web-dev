@@ -1,0 +1,58 @@
+*{
+    margin: 0;
+    padding: 0;
+   overflow: auto;
+   
+}
+.app {
+    text-align: center;
+    width:122rem;
+    border: 2px solid black;
+    width: 26rem;
+    height: 300px;
+    margin: 8px;
+     color: ;
+}
+.buttons{
+    display:flex;
+   flex-wrap: wrap;
+   flex-basis: auto;
+   margin: 8px;
+}
+.display{
+    color: aliceblue;
+   height: 50px;
+    background-color: black;
+    width: 24rem;
+    margin: 10px 15px;
+}
+/* button .buttons{
+padding: 5px;
+    /* display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-auto-rows: minmax(60px, auto); */
+
+.btn{
+  background-color: #ffee99;
+  color: black;
+  padding: 16px;
+  margin: 3px;
+  border-radius: 9px
+}
+.clear{
+    width: 40%;
+    text-align: center;
+}
+.highlight{
+    background-color: #adb5bd;
+}
+.delete{
+    width: 40%;
+    text-align: center;
+    background-color: #ba181b;
+    color: white;
+}
+
+.operator{
+    background-color: #fb8500;
+}
